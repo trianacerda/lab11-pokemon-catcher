@@ -37,8 +37,10 @@ function renderRandomPokemon() {
     pokemon1.value = randomPokemon1.id;
     pokemon2.value = randomPokemon2.id;
     pokemon3.value = randomPokemon3.id;
- //add images
- 
+
+    image1.src = randomPokemon1.url_image;
+    image2.src = randomPokemon2.url_image;
+    image3.src = randomPokemon3.url_image;
 }
 
 renderRandomPokemon();
