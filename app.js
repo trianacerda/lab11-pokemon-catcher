@@ -26,14 +26,11 @@ function renderRandomPokemon() {
         randomNum2 = Math.floor(Math.random() * data.length);
         randomNum3 = Math.floor(Math.random() * data.length);
     } 
-    console.log(data);
+    
     let randomPokemon1 = data[randomNum1];
     let randomPokemon2 = data[randomNum2];
     let randomPokemon3 = data[randomNum3];
-    console.log(randomPokemon1);
-    console.log(randomPokemon2);
-    console.log(randomPokemon3);  
-
+    
     pokemon1.value = randomPokemon1.id;
     pokemon2.value = randomPokemon2.id;
     pokemon3.value = randomPokemon3.id;
@@ -44,3 +41,11 @@ function renderRandomPokemon() {
 }
 
 renderRandomPokemon();
+
+button.addEventListener('click', ()=>{
+    if (totalPlays < 2) {
+        renderRandomPokemon();
+    } else {
+        window.location.replace('./results');
+    }
+});
