@@ -1,3 +1,5 @@
+import pokemon from './data/pokemon.js';
+
 export function showPokemon(id) {
     const resultsString = localStorage.getItem('RESULTS') || '[]';
     const results = JSON.parse(resultsString);
@@ -38,6 +40,22 @@ export function setPokedex(pokemonArray) {
 //write function encounterPokemon (showFruit)
 // -- changed shown++
 
+export function encounterPokemon(id){
+    const results = getPokedex();
+    const pokemonId = findById(results, id);
+    if (!pokemonId) {
+        const newPokemon = {
+            id: id,
+            shown: 1,
+            preferred: 0
+        };
+        results.push(newPokemon);
+    
+    } else {
+        pokemonId.shown++;
+    }
+    setPokedex(results);
+}
 //write function capturePokemon (preferredFruit)
 // -- changed prefered++
 // -- changed shown--
