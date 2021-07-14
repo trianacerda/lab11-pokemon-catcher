@@ -13,8 +13,7 @@ test('showPokemon should create a results object if pokemon not previously shown
 
     showPokemon(1);
 
-    const resultsString = localStorage.getItem('RESULTS') || '[]';
-    const results = JSON.parse(resultsString);
+    const results = getPokedex();
 
     expect.deepEqual(results[0], fakeResults);
 });
@@ -31,8 +30,7 @@ test('showPokemon should increment by results if pokemon previously shown', (exp
     showPokemon(1);
     showPokemon(1);
 
-    const resultsString = localStorage.getItem('RESULTS') || '[]';
-    const results = JSON.parse(resultsString);
+    const results = getPokedex();
 
     expect.deepEqual(results[0], fakeResults);
 });
