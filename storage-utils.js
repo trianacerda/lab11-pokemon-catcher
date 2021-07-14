@@ -24,3 +24,21 @@ function findById(items, id){
         }
     }
 }
+
+export function getPokedex() {
+    const resultsString = localStorage.getItem('RESULTS') || '[]';
+    const results = JSON.parse(resultsString);
+    return results;
+}
+
+//write function setReults function = setPokedex
+// --one line localStorage at the end of tests
+
+//write function encounterPokemon (showFruit)
+// -- changed shown++
+
+//write function capturePokemon (preferredFruit)
+// -- changed prefered++
+// -- changed shown--
+
+//TDD all functions above ^^^
