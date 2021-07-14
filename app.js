@@ -43,7 +43,7 @@ function renderRandomPokemon() {
 renderRandomPokemon();
 
 button.addEventListener('click', ()=>{
-    if (totalPlays < 2) {
+    if (totalPlays < 100) {
         renderRandomPokemon();
     } else {
         window.location.replace('./results');
