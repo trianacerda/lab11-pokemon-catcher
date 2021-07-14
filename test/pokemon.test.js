@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { getPokedex, showPokemon } from '../storage-utils.js';
+import { getPokedex, showPokemon, setPokedex } from '../storage-utils.js';
 
 const test = QUnit.test;
 
@@ -50,3 +50,19 @@ test('getPokedex should return object from localStorage', (expect) => {
     expect.deepEqual(results[0], fakeResults);
 });
 
+test('setPokedex should set stringified key value pair in localStorage', (expect) => {
+    localStorage.removeItem('RESULTS');
+    
+    const fakeResults = {
+        id: 1,
+        shown: 1,
+        preferred: 0
+    };
+
+    let results = setPokedex(fakeResults);
+  
+    let results = JSON.parse(fakeResults);
+    const expected = getPokedex(fakeResults);
+    
+    expect.deepEqual(results, expected);
+});
