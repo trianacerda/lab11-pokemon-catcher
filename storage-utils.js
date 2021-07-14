@@ -34,8 +34,6 @@ export function getPokedex() {
 export function setPokedex(pokemonArray) {
     localStorage.setItem('RESULTS', JSON.stringify(pokemonArray));
 }
-//write function setReults function = setPokedex
-// --one line localStorage at the end of tests
 
 //write function encounterPokemon (showFruit)
 // -- changed shown++

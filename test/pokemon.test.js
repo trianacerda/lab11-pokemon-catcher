@@ -53,16 +53,15 @@ test('getPokedex should return object from localStorage', (expect) => {
 test('setPokedex should set stringified key value pair in localStorage', (expect) => {
     localStorage.removeItem('RESULTS');
     
-    const fakeResults = {
+    const fakeResults = [{
         id: 1,
         shown: 1,
         preferred: 0
-    };
+    }];
 
-    let results = setPokedex(fakeResults);
-  
-    let results = JSON.parse(fakeResults);
-    const expected = getPokedex(fakeResults);
+    setPokedex(fakeResults);
+
+    const results = getPokedex();
     
-    expect.deepEqual(results, expected);
+    expect.deepEqual(results, fakeResults);
 });
