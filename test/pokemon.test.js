@@ -66,7 +66,7 @@ test('setPokedex should set stringified key value pair in localStorage', (expect
     expect.deepEqual(results, fakeResults);
 });
 
-test('Test for capturePokemon function incrementing shown pokemon', (expect) => {
+test('Test for capturePokemon function incrementing preferred pokemon', (expect) => {
     localStorage.removeItem('RESULTS');
     
     capturePokemon(1);

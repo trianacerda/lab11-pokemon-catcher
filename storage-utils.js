@@ -1,3 +1,4 @@
+
 function findById(items, id){
     for (const item of items){
         if (item.id === id) {
@@ -44,10 +45,11 @@ export function capturePokemon(id){
             preferred: 1
         };
         results.push(newPokemon);
-    
+
     } else {
         pokemonId.preferred++;
     }
     setPokedex(results);
-} 
+}
+
 
