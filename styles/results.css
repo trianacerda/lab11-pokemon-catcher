@@ -1,0 +1,12 @@
+.results{
+    margin: 20px;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+img{
+    width: 5%;
+}
+.results img{
+    align-items: center;
+}

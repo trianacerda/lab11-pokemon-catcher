@@ -1,24 +1,31 @@
 import { getPokedex, findById } from '../storage-utils.js';
 import data from '../data/pokemon.js';
 
-const results = document.getElementById('results');
-
 const getResults = getPokedex();
+
+
 const resultsDiv = document.createElement('div');
-results.appendChild(resultsDiv);
 resultsDiv.classList.add('results');
+const results = document.getElementById('results');
+results.appendChild(resultsDiv);
 
 for (let item of getResults){
+
     const pokemonImg = document.createElement('img');
     const pokemonId = findById(data, Number(item.id));
-    //we want this loop to find pokemon id from LS and display it on results page
     pokemonImg.src = pokemonId.url_image;
     resultsDiv.appendChild(pokemonImg);
+    
+    const shown = document.createElement('div');
+    resultsDiv.appendChild(shown);
+    shown.textContent = `Shown: ${item.shown}`;
+    
+    const preferred = document.createElement('div');
+    resultsDiv.appendChild(preferred);
+    preferred.textContent = `Preferred: ${item.preferred}`;
+    
 }
 
+
+
 //want to refactor this into a funciton
-
-
-
-
-
