@@ -44,10 +44,9 @@ function renderRandomPokemon() {
 renderRandomPokemon();
 
 button.addEventListener('click', ()=>{
-    if (totalPlays < 2) {
+    if (totalPlays < 10) {
         renderRandomPokemon();
         const preferred = document.querySelector('input[type=radio]:checked');
-        console.log(preferred.value);
         const numberify = preferred.value;
         capturePokemon(numberify);
     } else {
