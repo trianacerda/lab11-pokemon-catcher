@@ -44,7 +44,7 @@ function renderRandomPokemon() {
 renderRandomPokemon();
 
 button.addEventListener('click', ()=>{
-    if (totalPlays < 100) {
+    if (totalPlays < 2) {
         renderRandomPokemon();
         const preferred = document.querySelector('input[type=radio]:checked');
         console.log(preferred.value);
