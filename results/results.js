@@ -34,7 +34,6 @@ for (let item of getResults){
     
 }
 
-
 var ctx = document.getElementById('myChart').getContext('2d');
 new Chart(ctx, {
     type: 'bar',
