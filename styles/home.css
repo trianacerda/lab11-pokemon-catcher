@@ -30,3 +30,11 @@ body #submit-btn{
     margin:auto;
     background-color: aqua;
 }
+a{
+    font-size: 1.5em;
+    margin-left: 400px;
+}
+h1{
+    font-size: 3em;
+    margin-bottom: 40px;
+}
